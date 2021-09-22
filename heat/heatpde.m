@@ -23,8 +23,6 @@ title('Solution at t = 2')
 xlabel('Distance x')
 ylabel('u(x,2)')
 error=abs(u(end,:)-ana);
-log_error=log(error(end:end));
-logh=log(1/20);
-p=log_error/logh;
+l_2norm = ((1/20)*sum(error.*error))^(1/2);
 %計算誤差精準度
 % 比較t=2的數值解和解析解
