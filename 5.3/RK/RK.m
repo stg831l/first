@@ -6,7 +6,7 @@
 %Y4=yn+((1/2)*(yn+(1/2)*yn*k)*k)*k
 %yn+(k/6)*(Y1+2*Y2+2*Y3+Y4)
 T=2;
-m=10;
+m=160;
 h=T/m;
 t=0:h:T;
 % f(y,t) = y;
@@ -20,6 +20,8 @@ for n=1:length(t)-1
 end
 
 plot(t,y,t,exp(t))
+title('Runge-Kutta methods  n=160')
+legend('analytical solution', 'numerical solution','Location','SouthEast')
 
 ana=exp(t);
 error=abs(y-ana);
