@@ -24,7 +24,7 @@ xfine = linspace(ax,bx,101);
 ufine = utrue(xfine);
 
 % Solve the problem for ntest different grid sizes to test convergence:
-m1vals = [10 20 40 80];
+m1vals = [20 40 80 160];
 ntest = length(m1vals);
 hvals = zeros(ntest,1);  % to hold h values
 E = zeros(ntest,1);      % to hold errors
